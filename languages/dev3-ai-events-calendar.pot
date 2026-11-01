@@ -1,0 +1,2917 @@
+# Copyright (C) 2026 DEV3 Technologies
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DEV3 AI Event Writer for The Events Calendar 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dev3-ai-events-calendar\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-25T06:05:25+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dev3-ai-events-calendar\n"
+
+#. Plugin Name of the plugin
+#: dev3-ai-events-calendar.php
+msgid "DEV3 AI Event Writer for The Events Calendar"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dev3-ai-events-calendar.php
+msgid "https://dev3.tech/item/dev3-ai-events-calendar"
+msgstr ""
+
+#. Description of the plugin
+#: dev3-ai-events-calendar.php
+msgid "DEV3 AI writes event descriptions, social posts, emails, recaps, FAQs and SEO meta for The Events Calendar, and imports events from flyers."
+msgstr ""
+
+#. Author of the plugin
+#: dev3-ai-events-calendar.php
+msgid "DEV3 Technologies"
+msgstr ""
+
+#. Author URI of the plugin
+#: dev3-ai-events-calendar.php
+msgid "https://dev3.tech"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:55
+msgid "DEV3 AI Events"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:56
+#: build/admin.js:1
+msgid "Dashboard"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:58
+msgid "DEV3 AI Writer"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:88
+#: build/admin.js:1
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:101
+msgid "Write with DEV3 AI"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:114
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Generate with DEV3 AI"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:141
+msgid "DEV3 AI Event Writer needs The Events Calendar (free). Install and activate it to start writing."
+msgstr ""
+
+#: includes/Admin/Editor.php:59
+#: build/editor.js:1
+msgid "DEV3 AI Event Writer"
+msgstr ""
+
+#: includes/Ai/Writer.php:62
+msgid "DEV3 AI returned an empty draft. Try again."
+msgstr ""
+
+#: includes/Ai/Writer.php:75
+#: includes/Content/Assets.php:244
+#: includes/Content/Templates.php:80
+#: includes/Rest/Events_Controller.php:245
+#: includes/Service/Drafter.php:36
+#: includes/Service/Drafter.php:99
+msgid "Event not found."
+msgstr ""
+
+#: includes/Ai/Writer.php:145
+#: includes/Content/Templates.php:178
+#: includes/Service/Drafter.php:39
+msgid "Unknown output type."
+msgstr ""
+
+#: includes/Content/Templates.php:34
+msgid "there"
+msgstr ""
+
+#: includes/Content/Templates.php:38
+msgid "online"
+msgstr ""
+
+#: includes/Content/Templates.php:87
+#: build/admin.js:1
+msgid "Event details"
+msgstr ""
+
+#. translators: %s: date and time
+#: includes/Content/Templates.php:88
+#, php-format
+msgid "When: %s"
+msgstr ""
+
+#. translators: %s: venue
+#: includes/Content/Templates.php:90
+#, php-format
+msgid "Where: %s"
+msgstr ""
+
+#. translators: %s: cost
+#: includes/Content/Templates.php:93
+#, php-format
+msgid "Cost: %s"
+msgstr ""
+
+#. translators: %s: organizer names
+#: includes/Content/Templates.php:96
+#, php-format
+msgid "Organised by: %s"
+msgstr ""
+
+#. translators: 1: title, 2: date
+#: includes/Content/Templates.php:104
+#, php-format
+msgid "%1$s on %2$s."
+msgstr ""
+
+#: includes/Content/Templates.php:113
+msgid "Link in bio."
+msgstr ""
+
+#. translators: 1: event, 2: date
+#: includes/Content/Templates.php:122
+#, php-format
+msgid "Join us: %1$s on %2$s"
+msgstr ""
+
+#: includes/Content/Templates.php:124
+msgid ""
+"Hi {attendee_name},\n"
+"\n"
+"We would love to see you at {event_title}.\n"
+"\n"
+"When: {event_date}, {event_time}\n"
+"Where: {venue}\n"
+"\n"
+"Details and tickets: {event_url}\n"
+"\n"
+"See you there,\n"
+"{site_name}"
+msgstr ""
+
+#. translators: %s: event
+#: includes/Content/Templates.php:128
+#, php-format
+msgid "Reminder: %s is coming up"
+msgstr ""
+
+#: includes/Content/Templates.php:130
+msgid ""
+"Hi {attendee_name},\n"
+"\n"
+"This is a friendly reminder that {event_title} is coming up.\n"
+"\n"
+"When: {event_date}, {event_time}\n"
+"Where: {venue}\n"
+"\n"
+"Event page: {event_url}\n"
+"\n"
+"See you soon,\n"
+"{site_name}"
+msgstr ""
+
+#. translators: %s: event
+#: includes/Content/Templates.php:136
+#, php-format
+msgid "Thank you for coming to %s"
+msgstr ""
+
+#. translators: %s: event
+#: includes/Content/Templates.php:137
+msgid "A short recap and what comes next."
+msgstr ""
+
+#. translators: %d: number of attendees
+#: includes/Content/Templates.php:140
+#, php-format
+msgid ""
+"Hi {attendee_name},\n"
+"\n"
+"Thank you for joining {event_title}! You were one of %d people who made it a great event.\n"
+"\n"
+"We'd love your feedback, and we hope to see you at the next one: {event_url}\n"
+"\n"
+"Thanks again,\n"
+"{site_name}"
+msgstr ""
+
+#: includes/Content/Templates.php:141
+msgid ""
+"Hi {attendee_name},\n"
+"\n"
+"Thank you for joining {event_title}!\n"
+"\n"
+"We'd love your feedback, and we hope to see you at the next one: {event_url}\n"
+"\n"
+"Thanks again,\n"
+"{site_name}"
+msgstr ""
+
+#: includes/Content/Templates.php:146
+msgid "When does the event take place?"
+msgstr ""
+
+#: includes/Content/Templates.php:152
+msgid "Where is it?"
+msgstr ""
+
+#: includes/Content/Templates.php:158
+msgid "How much does it cost?"
+msgstr ""
+
+#: includes/Content/Templates.php:163
+msgid "Who can I contact with questions?"
+msgstr ""
+
+#. translators: %s: organizer
+#. translators: %s: site name
+#: includes/Content/Templates.php:164
+#, php-format
+msgid "Please contact %s."
+msgstr ""
+
+#. translators: 1: event, 2: when, 3: where
+#: includes/Content/Templates.php:172
+#, php-format
+msgid "%1$s: %2$s%3$s. Details and tickets."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:212
+msgid "Unsupported image type."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:216
+msgid "The image data is invalid."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "AI features are turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "Turn AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Storefront AI is turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Turn storefront AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:49
+msgid "No Gemini API key is configured."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:50
+msgid "Open the plugin settings → API Config and paste a key from Google AI Studio."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:63
+msgid "AI paused: the monthly AI budget is reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:64
+msgid "Raise the monthly cap in API Config, or wait until the budget resets on the 1st of next month."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:80
+msgid "The AI service took too long to respond."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:81
+msgid "Try again, shorten the prompt, lower Max Output Tokens, or switch to the faster model."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:89
+msgid "Your server could not reach the AI service (Google Gemini API)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:90
+msgid "Check the server's internet connection or firewall (outbound HTTPS to generativelanguage.googleapis.com)."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: includes/Core3/Api/Api_Error.php:98
+#, php-format
+msgid "Request to the AI service failed: %s"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:99
+#: includes/Core3/Api/Gemini_Client.php:250
+#: includes/Core3/Api/Gemini_Client.php:422
+msgid "Try again in a moment."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:128
+msgid "The Gemini API key is not valid."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:129
+msgid "Create a new key in Google AI Studio and paste it in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "Your Gemini quota is exhausted."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "AI rate limit reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:139
+msgid "Wait for the quota to reset, enable billing on your Google Cloud project, or switch to a model with remaining quota."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:140
+msgid "Wait a few seconds and try again."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:148
+msgid "This API key is not allowed to use Gemini."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:149
+msgid "Enable the Generative Language API for the key's project, and check any key restrictions (HTTP referrer / IP)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:156
+msgid "The selected Gemini model is not available."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:157
+msgid "Pick another model in API Config — click \"Refresh models\" to load the ones your key can use."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:164
+msgid "The AI service is not available in your server's region."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:165
+msgid "Host the site in a supported region or use a key from a supported project."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:172
+msgid "The AI service is temporarily unavailable."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:173
+msgid "This is on Google's side. Try again shortly or switch models."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:180
+msgid "The AI service rejected the request."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:181
+msgid "Adjust the prompt or settings and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:250
+msgid "The AI returned an incomplete embedding batch."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI blocked this image request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI did not return an image."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+#: includes/Core3/Api/Gemini_Client.php:472
+#: includes/Core3/Api/Gemini_Client.php:508
+msgid "Rephrase the prompt and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+msgid "Try again, or describe the image more concretely."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:421
+msgid "The AI returned malformed data."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:471
+msgid "The AI blocked this request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:507
+msgid "The AI stopped because the response was flagged."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:515
+msgid "The AI ran out of output tokens before writing an answer."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:516
+msgid "Increase Max Output Tokens in API Config, or set Reasoning to \"Low\"."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:523
+msgid "The AI returned an empty response."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:524
+msgid "Try again or rephrase the prompt."
+msgstr ""
+
+#: includes/Core3/Api/Prompts.php:124
+msgid "Unknown prompt template."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:90
+msgid "Unknown job type."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:116
+msgid "The job could not be saved."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:238
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Failed"
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:339
+#: includes/Core3/Rest/Core_Controller.php:112
+msgid "Job not found."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:33
+#: includes/Core3/Core/Privacy.php:34
+#: includes/Core3/Core/Privacy.php:165
+msgid "AI usage log"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/Core3/Core/Privacy.php:85
+#, php-format
+msgid "This site uses %s, which sends the content needed for AI features (for example product details, reviews or form text) to Google Gemini, operated by Google LLC, as a data processor. Only the fields needed for the requested feature are sent. Google's terms and privacy policy apply: https://ai.google.dev/gemini-api/terms"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:87
+msgid "The plugin keeps a usage log (time, feature, token counts and the user account that triggered the request) to show AI usage and costs to administrators. It does not store the prompts."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:169
+msgid "Feature"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:173
+#: build/admin.js:1
+msgid "Model"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:177
+#: build/admin.js:1
+msgid "Tokens"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:181
+#: build/admin.js:1
+msgid "Date"
+msgstr ""
+
+#: includes/Core3/Data/Usage_Repository.php:194
+msgid "Deleted user"
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:72
+msgid "Your session has expired. Reload the editor and try again."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:75
+#: includes/Core3/Rest/Core_Controller.php:115
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:94
+msgid "Cross-origin requests are not allowed."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:104
+msgid "Too many requests. Please wait a moment."
+msgstr ""
+
+#: includes/Frontend/Faq.php:143
+#: build/editor.js:1
+msgid "Frequently asked questions"
+msgstr ""
+
+#: includes/Rest/Drafts_Controller.php:139
+#: includes/Service/Drafter.php:93
+#: includes/Service/Drafter.php:152
+msgid "Draft not found."
+msgstr ""
+
+#: includes/Rest/Drafts_Controller.php:142
+#: includes/Rest/Events_Controller.php:248
+msgid "You do not have permission to edit this event."
+msgstr ""
+
+#: includes/Rest/Drafts_Controller.php:207
+msgid "Not allowed."
+msgstr ""
+
+#: includes/Rest/Events_Controller.php:439
+msgid "Only administrators can email attendees."
+msgstr ""
+
+#: includes/Rest/Imports_Controller.php:103
+msgid "You need permission to create events and upload files."
+msgstr ""
+
+#: includes/Rest/Imports_Controller.php:109
+#: includes/Service/Importer.php:288
+msgid "Import not found."
+msgstr ""
+
+#: includes/Rest/Imports_Controller.php:112
+msgid "This import belongs to another user."
+msgstr ""
+
+#: includes/Rest/Imports_Controller.php:143
+msgid "You cannot use that file."
+msgstr ""
+
+#: includes/Rest/Imports_Controller.php:156
+msgid "The upload failed. Try a smaller file."
+msgstr ""
+
+#: includes/Rest/Imports_Controller.php:159
+#: includes/Service/Importer.php:55
+#: build/admin.js:1
+msgid "The file is too large (15 MB max)."
+msgstr ""
+
+#: includes/Rest/Imports_Controller.php:163
+#: includes/Service/Importer.php:52
+#: build/admin.js:1
+msgid "Use a JPG, PNG or WebP image, or a PDF."
+msgstr ""
+
+#: includes/Seo/Seo.php:54
+msgid "DEV3 (built-in meta tags)"
+msgstr ""
+
+#: includes/Service/Bulk.php:48
+msgid "Pick at least one event and one output."
+msgstr ""
+
+#: includes/Service/Bulk.php:51
+msgid "Connect DEV3 AI first (API Config), or use templates instead."
+msgstr ""
+
+#. translators: %d: max items
+#: includes/Service/Bulk.php:63
+#, php-format
+msgid "Too many outputs in one run (max %d). Select fewer events."
+msgstr ""
+
+#: includes/Service/Drafter.php:96
+msgid "This draft was already handled."
+msgstr ""
+
+#: includes/Service/Drafter.php:103
+msgid "The event changed after this draft was written. Accept anyway?"
+msgstr ""
+
+#: includes/Service/Importer.php:49
+msgid "Add a flyer: a JPG, PNG or WebP image, or a PDF."
+msgstr ""
+
+#: includes/Service/Importer.php:75
+msgid "Connect DEV3 AI first (API Config), or fill the event in by hand."
+msgstr ""
+
+#: includes/Service/Importer.php:132
+msgid "The uploaded flyer is missing."
+msgstr ""
+
+#: includes/Service/Importer.php:291
+msgid "This flyer was already imported."
+msgstr ""
+
+#: includes/Service/Importer.php:295
+msgid "Give the event a title."
+msgstr ""
+
+#: includes/Service/Importer.php:298
+msgid "Add a valid start date."
+msgstr ""
+
+#: includes/Service/Mailer.php:115
+msgid "Your account has no email address."
+msgstr ""
+
+#: includes/Service/Mailer.php:119
+msgid "The email could not be sent. Save a subject and body first, and check your site can send email."
+msgstr ""
+
+#: includes/Service/Mailer.php:138
+msgid "Save this email first."
+msgstr ""
+
+#: includes/Service/Mailer.php:142
+msgid "This event has no attendees with an email address yet."
+msgstr ""
+
+#: includes/Service/Mailer.php:181
+msgid "Not sent"
+msgstr ""
+
+#: includes/Tec/Attendees.php:99
+msgid "General"
+msgstr ""
+
+#: includes/Tec/Attendees.php:163
+msgid "Free"
+msgstr ""
+
+#: includes/Tec/Events.php:153
+msgid "All day"
+msgstr ""
+
+#: includes/Tec/Events.php:516
+msgid "The event could not be created."
+msgstr ""
+
+#: includes/Tec/Places.php:206
+msgid "The venue needs a name."
+msgstr ""
+
+#: includes/Tec/Places.php:265
+msgid "The organizer needs a name."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Request cancelled."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "You appear to be offline."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Check your internet connection, then try again."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Could not reach your WordPress site."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Check your connection or reload the editor."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Your session has expired."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Save your work and reload the page."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Something went wrong."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Loading"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Generating…"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "AI paused: monthly budget reached"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Adjust the cap"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Try again"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Queued"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Running"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Done"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Background job"
+msgstr ""
+
+#. translators: 1: processed, 2: total, 3: percent
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%1$s of %2$s processed (%3$s%%)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Starting…"
+msgstr ""
+
+#. translators: %s: failed count
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%s failed"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Cancel"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Resume"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Retry failed"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Show failed items"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimated AI spend this month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI off"
+msgstr ""
+
+#. translators: %s: cap
+#: build/admin.js:1
+#, js-format
+msgid "of %s cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI turned off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused · cap reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Near cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget used"
+msgstr ""
+
+#. translators: 1: requests, 2: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s requests · %2$s tokens"
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:1
+#, js-format
+msgid "resets %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Set a monthly cap"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Dismiss notification"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose from list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom model ID…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Google Gemini API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create a free key in Google AI Studio, paste it here and click “Validate & save”. The key is encrypted in your database and never sent to the browser."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Get an API key"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The key is defined by the DEV3EC_GEMINI_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key"
+msgstr ""
+
+#. translators: %d: number of models
+#: build/admin.js:1
+#, js-format
+msgid "Connected — %d models available to this key."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Validate & save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key removed."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OpenSSL is not available on this server, so the key is only obfuscated. Consider defining DEV3EC_GEMINI_API_KEY in wp-config.php instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Models & generation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast is used for most tasks; Pro for complex, long-form or structured work."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Engine settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save engine settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-flash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pro model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-pro"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Image model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for image generation. Default: gemini-2.5-flash-image"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Embedding model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for semantic search. Default: gemini-embedding-001"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Temperature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lower = focused and consistent, higher = more creative (0–1)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Max output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upper limit per answer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasoning"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Low” keeps generations fast and cheap; “Auto” lets the model think longer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low (fast)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto (model decides)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Costs are estimated from token counts and Google’s list prices. Check exact billing in Google AI Studio."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget and safety settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI pauses when the estimated spend this month reaches the cap. 0 = no cap."
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI features"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Turn off to stop every AI call. The plugin keeps working without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Storefront AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Kill switch for visitor-facing AI. Visitors get the non-AI fallback."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cache AI results"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reuse answers for identical requests to save tokens."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mask personal data"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace emails, phone and card numbers before text is sent to Google Gemini."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pagination"
+msgstr ""
+
+#. translators: 1: first row, 2: last row, 3: total rows
+#: build/admin.js:1
+#, js-format
+msgid "%1$s–%2$s of %3$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Previous page"
+msgstr ""
+
+#. translators: 1: page, 2: pages
+#: build/admin.js:1
+#, js-format
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Next page"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Actions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing here yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sort by"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Est. cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Token counts come from the AI provider’s usage metadata; costs are estimates. Check exact billing in Google AI Studio / Cloud Console."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Period"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 7 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 30 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 90 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Total tokens"
+msgstr ""
+
+#. translators: 1: input, 2: output
+#: build/admin.js:1
+#, js-format
+msgid "%1$s in · %2$s out"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Avg. response"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Errors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day chart"
+msgstr ""
+
+#. translators: 1: date, 2: requests, 3: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s — %2$s requests, %3$s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests in this period yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage appears here as soon as an AI feature runs."
+msgstr ""
+
+#: build/admin.js:1
+msgid "By task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "User"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests logged yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time (s)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Status"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Plugin sections"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Section"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Close"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "DEV3 AI draft"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Accept"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Changes"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Side by side"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Draft"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Not saved yet"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Draft view"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Edit JSON"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Edit draft"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Current"
+msgstr ""
+
+#. translators: %s: token count
+#. translators: %s: tokens
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%s tokens"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Cached"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Reject"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Regenerate"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Done editing"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Edit"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "The JSON is not valid. Fix it or regenerate."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Over the limit: shorten it before posting."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Description"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Social posts"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Promo email"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Reminder email"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Recap email"
+msgstr ""
+
+#: build/admin.js:1
+#: build/blocks.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "FAQ"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "SEO meta"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Subject"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Preheader (inbox preview)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Body"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Excerpt (event listings)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Description (headings start with ##)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Questions and answers (Q: / A:)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "SEO title"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Meta description"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Friendly"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Professional"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Exciting"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Warm"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Concise"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Formal"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Playful"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Notes for DEV3 AI (programme, speakers, what makes it special)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Highlights to mention (optional)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Notes for DEV3 AI (optional)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Networks"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Fewer options"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "More options"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Tone"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Language"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Site language"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Length"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Short"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Medium"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Long"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Audience"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "e.g. families, developers"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Questions"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Focus phrase"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "e.g. jazz night Leeds"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Characters:"
+msgstr ""
+
+#. translators: %s: network
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%s post"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Saved."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Current description"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Open in the event editor"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "No description yet"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Generate one with DEV3 AI or start from the template."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Saved posts"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Write a post or generate one…"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Copied."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Copy"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Share"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Save posts"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Saved email"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Preheader"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Shown after the subject in most inboxes."
+msgstr ""
+
+#. translators: %s: merge tags
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "Merge tags: %s"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Save email"
+msgstr ""
+
+#. translators: %s: email
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "Test sent to %s."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Send me a test"
+msgstr ""
+
+#. translators: %d: attendees
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "Send to %d attendee"
+msgid_plural "Send to %d attendees"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Copy the promo email into your newsletter tool, or send yourself a test to forward it."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "No attendees with an email address yet (Event Tickets)."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Sending emails"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Emails sent."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Email all attendees?"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Send now"
+msgstr ""
+
+#. translators: 1: count, 2: subject
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "One email goes to %1$d attendee with the subject “%2$s”. This cannot be undone."
+msgid_plural "One email each goes to %1$d attendees with the subject “%2$s”. This cannot be undone."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Saved FAQ"
+msgstr ""
+
+#. translators: %d: questions
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%d question"
+msgid_plural "%d questions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Questions and answers"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "One “Q:” line and one “A:” line per question. Shown on the event page below the description."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Save FAQ"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "FAQ blocks inserted. Update the event to save them."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Insert as blocks"
+msgstr ""
+
+#. translators: %s: SEO plugin
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "Saved SEO meta · writes into %s"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Search result preview"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Search engines will pick text from the page."
+msgstr ""
+
+#. translators: %d: characters
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%d / 60 characters"
+msgstr ""
+
+#. translators: %d: characters
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%d / 155 characters"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Save SEO meta"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Save the event with its date and venue first, so DEV3 AI can use them."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Inserted into the editor. Update the event to save it."
+msgstr ""
+
+#. translators: %s: output
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%s saved."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Template draft"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "AI paused: the monthly AI budget is reached. Templates still work."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Connect DEV3 AI (API Config) to generate drafts. Templates work without a key."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Use template"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "When accepted"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Replace the text blocks (TEC blocks stay)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Add after the current text"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Accept & insert"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "The event changed"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Accept anyway"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "The event was edited after this draft was written, so the draft may describe old details."
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Social"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Emails"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "SEO"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Promo"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Reminder"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Recap"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Event details DEV3 AI uses"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "No date saved yet"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "No venue"
+msgstr ""
+
+#. translators: 1: going, 2: checked in
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%1$d attending · %2$d checked in"
+msgstr ""
+
+#. translators: %d: drafts
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+#, js-format
+msgid "%d draft waits for review."
+msgid_plural "%d drafts wait for review."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Output"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Email"
+msgstr ""
+
+#: build/admin.js:1
+#: build/editor.js:1
+#: build/metabox.js:1
+msgid "Install Event Tickets (free) to include attendance numbers in the recap and email attendees."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reading…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Ready to review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Event created"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pending"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Accepted"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Rejected"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Event"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Venue"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Descriptions, social posts, emails, FAQs and SEO for The Events Calendar, written as drafts you review."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Import a flyer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Write for events"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connect DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add your API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add a Google Gemini API key to generate drafts and read flyers. Templates, manual editing and emails work without it."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Tip: Event Tickets (free)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "With Event Tickets, recap emails use real attendance numbers and you can email attendees right from the writer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upcoming events"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Need a description"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upcoming, under 300 characters"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Drafts to review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Accepted this month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upcoming events that need content"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All events"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All caught up"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Every upcoming event has a description."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent flyer imports"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Import"
+msgstr ""
+
+#. translators: %d: id
+#: build/admin.js:1
+#, js-format
+msgid "Import #%d"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit event"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No imports yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upload a flyer or poster and DEV3 AI turns it into a draft event."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where to find DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Event editor"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open an event and click the DEV3 AI Event Writer icon in the top bar (block editor)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open an event: the DEV3 AI Event Writer box sits under the editor (classic editor)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Events list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use the “Write with DEV3 AI” row link, or select events and choose “Generate with DEV3 AI” from Bulk actions."
+msgstr ""
+
+#. translators: %s: SEO plugin
+#: build/admin.js:1
+#, js-format
+msgid "SEO meta is written into %s."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Desc"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remind"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Content coverage"
+msgstr ""
+
+#: build/admin.js:1
+msgid "done"
+msgstr ""
+
+#: build/admin.js:1
+msgid "missing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Select"
+msgstr ""
+
+#. translators: %s: event
+#: build/admin.js:1
+#, js-format
+msgid "Select %s"
+msgstr ""
+
+#. translators: %d: drafts
+#: build/admin.js:1
+#, js-format
+msgid "%d draft"
+msgid_plural "%d drafts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+msgid "Content"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Any content"
+msgstr ""
+
+#. translators: %s: output
+#: build/admin.js:1
+#, js-format
+msgid "Missing: %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Events"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pick events and let DEV3 AI write the missing pieces in the background. Every result lands in Review as a draft."
+msgstr ""
+
+#. translators: %d: events
+#: build/admin.js:1
+#, js-format
+msgid "Generate for %d event"
+msgid_plural "Generate for %d events"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+msgid "Select events to generate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Show"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upcoming"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Past"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Category"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All categories"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Search events"
+msgstr ""
+
+#. translators: %d: events
+#: build/admin.js:1
+#, js-format
+msgid "%d event"
+msgid_plural "%d events"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+msgid "Select page"
+msgstr ""
+
+#. translators: %d: selected
+#: build/admin.js:1
+#, js-format
+msgid "Clear (%d)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No events found"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Change the filters, or create events in The Events Calendar."
+msgstr ""
+
+#. translators: %d: events
+#: build/admin.js:1
+#, js-format
+msgid "%d event selected"
+msgid_plural "%d events selected"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+msgid "Open Review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Start DEV3 AI run"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create template drafts"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Writing drafts"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Drafts are ready in Review."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connect DEV3 AI in API Config, or switch to templates."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Outputs"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Written by"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Templates (no AI)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Notes for every event (optional)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Only fill what is missing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Skips outputs an event already has."
+msgstr ""
+
+#: build/admin.js:1
+msgid "View"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit in TEC"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pick an event"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Venue name"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Address"
+msgstr ""
+
+#: build/admin.js:1
+msgid "City"
+msgstr ""
+
+#: build/admin.js:1
+msgid "State / region"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Postal code"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Country"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Phone"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Organizer name"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Website"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Organizer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose…"
+msgstr ""
+
+#. translators: 1: name, 2: score
+#: build/admin.js:1
+#, js-format
+msgid "%1$s (%2$d%% match)"
+msgstr ""
+
+#. translators: 1: name, 2: score
+#: build/admin.js:1
+#, js-format
+msgid "Best match: %1$s (%2$d%%)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use existing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create new"
+msgstr ""
+
+#: build/admin.js:1
+msgid "None"
+msgstr ""
+
+#. translators: %s: venue/organizer
+#: build/admin.js:1
+#, js-format
+msgid "Existing %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI is not sure: check this against the flyer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not on the flyer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Flyer"
+msgstr ""
+
+#. translators: %s: file
+#: build/admin.js:1
+#, js-format
+msgid "Flyer: %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open PDF"
+msgstr ""
+
+#. translators: %s: model
+#: build/admin.js:1
+#, js-format
+msgid "Read by %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI draft event"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check every field against the flyer. The event is created as a draft; nothing is published."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft event created."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create draft event"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Title"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Start date"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Start time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "End date"
+msgstr ""
+
+#: build/admin.js:1
+msgid "End time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All-day event"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time zone"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Currency symbol"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Event website"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Event categories"
+msgstr ""
+
+#. translators: %s: categories
+#: build/admin.js:1
+#, js-format
+msgid "On the flyer: %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use the flyer as the featured image"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Uploaded"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Import from a flyer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upload a flyer or poster (image or PDF). DEV3 AI reads the event and matches the venue and organizer; you check it and create a draft event."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft event created"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open it to check the details, then publish it from The Events Calendar."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upload"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Drop a flyer here"
+msgstr ""
+
+#: build/admin.js:1
+msgid "JPG, PNG, WebP or PDF, up to 15 MB."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose another file"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose a file"
+msgstr ""
+
+#: build/admin.js:1
+msgid "e.g. the year is 2027; ignore the sponsor logos"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connect DEV3 AI to read flyers automatically. You can still upload one and fill in the details by hand."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Read with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fill in by hand"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI is reading the flyer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The flyer could not be read"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Try another file"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Back to upload"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent imports"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your uploaded flyers show up here."
+msgstr ""
+
+#. translators: %s: output
+#: build/admin.js:1
+#, js-format
+msgid "%s saved to the event."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft rejected."
+msgstr ""
+
+#. translators: %d: drafts
+#: build/admin.js:1
+#, js-format
+msgid "%d draft accepted."
+msgid_plural "%d drafts accepted."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: drafts
+#: build/admin.js:1
+#, js-format
+msgid "%d draft rejected."
+msgid_plural "%d drafts rejected."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: output, 2: event
+#: build/admin.js:1
+#, js-format
+msgid "Select %1$s for %2$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Template"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Created"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing changes on your events until you accept a draft. Open a draft to compare it with the current text and edit it."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Show all drafts"
+msgstr ""
+
+#. translators: %d: job id
+#: build/admin.js:1
+#, js-format
+msgid "Showing drafts of bulk run #%d."
+msgstr ""
+
+#: build/admin.js:1
+msgid "All"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All outputs"
+msgstr ""
+
+#. translators: %d: drafts
+#: build/admin.js:1
+#, js-format
+msgid "Accept %d"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No drafts waiting"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No drafts"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generate content from Events or in the event editor."
+msgstr ""
+
+#. translators: %s: status
+#: build/admin.js:1
+#, js-format
+msgid "This draft was %s."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Defaults for the writer, what shows on event pages, emails and flyer imports."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Writing defaults"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default tone"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default language"
+msgstr ""
+
+#: build/admin.js:1
+msgid "e.g. English, Deutsch, es_ES. Empty = site language."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Brand hashtags"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Added to template social posts."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default social networks"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Event pages"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Show the FAQ"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Below the event description"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Only where I add the block or [dev3ec_faq]"
+msgstr ""
+
+#: build/admin.js:1
+msgid "SEO meta output"
+msgstr ""
+
+#: build/admin.js:1
+msgid "With Yoast SEO or Rank Math active, values go into their fields instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Print meta tags when no SEO plugin is active"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Never print meta tags"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add FAQ schema (FAQPage JSON-LD)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "From name"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Site name"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reply-to address"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Send the saved reminder email automatically"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Once per event, to Event Tickets attendees, before the event starts."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Hours before the start"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Flyer imports"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Imported events are saved as"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pending review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use the flyer as the featured image by default"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Uninstall"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Delete DEV3 data when the plugin is deleted"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Drafts, imports, saved social posts, emails, FAQs and settings. Events stay."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Import flyer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "API Config"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage Logs"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connect Google Gemini, pick models and set a monthly AI budget."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests, tokens and estimated cost of every DEV3 AI feature."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Made by DEV3 Technologies · AI by Google Gemini, using your own API key."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Event FAQ"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Questions and answers of an event (written in DEV3 AI Event Writer), with FAQ schema."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Event ID (empty = this event)"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Heading"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "No FAQ saved for this event yet. Write one in the DEV3 AI Event Writer sidebar."
+msgstr ""
+
+#: build/editor.js:1
+msgid "DEV3 AI reads the last saved version of the event. Save to include your latest changes."
+msgstr ""

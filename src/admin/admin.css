@@ -1,0 +1,36 @@
+/* DEV3 AI Event Writer admin app. */
+.dev3ec-root .dev3ec-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.dev3ec-root .dev3ec-list li { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 10px 0; border-bottom: 1px solid var(--dev3ec-border); margin: 0; }
+.dev3ec-root .dev3ec-list li:last-child { border-bottom: 0; }
+.dev3ec-root .dev3ec-list__main { flex: 1 1 160px; min-width: 0; font-weight: 500; overflow-wrap: anywhere; }
+.dev3ec-root .dev3ec-list__link { font-size: 13px; }
+.dev3ec-root .dev3ec-where { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+.dev3ec-root .dev3ec-where li { margin: 0; }
+
+/* Coverage chips. */
+.dev3ec-root .dev3ec-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; }
+.dev3ec-root .dev3ec-chips li { margin: 0; padding: 1px 6px; font-size: 11px; line-height: 18px; border-radius: 999px; border: 1px solid var(--dev3ec-border); color: var(--dev3ec-text-muted); background: var(--dev3ec-surface); position: relative; }
+.dev3ec-root .dev3ec-chips li.is-on { background: var(--dev3ec-success-soft); border-color: transparent; color: var(--dev3ec-text); }
+.dev3ec-root .dev3ec-evt { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; min-width: 0; }
+.dev3ec-root .dev3ec-evt__title { font-weight: 600; overflow-wrap: anywhere; }
+
+/* Fieldsets, checkbox groups, radios. */
+.dev3ec-root .dev3ec-fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 8px; min-width: 0; }
+.dev3ec-root .dev3ec-fieldset legend { font-weight: 600; font-size: 13px; padding: 0; margin-bottom: 8px; }
+.dev3ec-root .dev3ec-checks { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.dev3ec-root .dev3ec-radios { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.dev3ec-root .dev3ec-radios label { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; }
+.dev3ec-root .dev3ec-match { padding: 12px; border: 1px solid var(--dev3ec-border); border-radius: var(--dev3ec-radius); }
+.dev3ec-root .dev3ec-match legend { padding: 0 4px; margin-bottom: 0; }
+.dev3ec-root .dev3ec-help .dev3ec-ui-icon { vertical-align: -2px; color: var(--dev3ec-success); }
+
+/* Row checkboxes: label kept for screen readers only (positioned ancestor for the clip). */
+.dev3ec-root .dev3ec-hide-label { position: relative; }
+.dev3ec-root .dev3ec-hide-label .dev3ec-ui-check__label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+/* Flyer upload + preview. */
+.dev3ec-root .dev3ec-drop { position: relative; display: grid; justify-items: center; gap: 8px; padding: 28px 16px; text-align: center; border: 2px dashed var(--dev3ec-border-strong); border-radius: var(--dev3ec-radius); background: var(--dev3ec-surface-2); color: var(--dev3ec-text-muted); }
+.dev3ec-root .dev3ec-drop.is-drag { border-color: var(--dev3ec-brand); background: var(--dev3ec-brand-soft); }
+.dev3ec-root .dev3ec-drop.has-file { border-style: solid; border-color: var(--dev3ec-brand-line); }
+.dev3ec-root .dev3ec-drop__title { margin: 0; font-weight: 600; color: var(--dev3ec-text); overflow-wrap: anywhere; }
+.dev3ec-root .dev3ec-flyer { display: block; width: 100%; height: auto; max-height: 720px; object-fit: contain; border-radius: var(--dev3ec-radius); background: var(--dev3ec-surface-2); }

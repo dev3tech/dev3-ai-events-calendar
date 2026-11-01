@@ -1,0 +1,51 @@
+/* Event FAQ (front end). Inherits theme fonts and colours; tweak with the custom properties. */
+.dev3ec-faq {
+	--dev3ec-faq-line: color-mix(in srgb, currentColor 18%, transparent);
+	--dev3ec-faq-tint: color-mix(in srgb, currentColor 4%, transparent);
+	--dev3ec-faq-radius: 8px;
+	--dev3ec-faq-gap: 8px;
+	margin: 2em 0;
+	display: grid;
+	gap: var(--dev3ec-faq-gap);
+}
+.dev3ec-faq .dev3ec-faq__title { margin: 0 0 0.25em; font-size: var(--dev3ec-faq-title-size, 1.5em); line-height: 1.25; }
+.dev3ec-faq .dev3ec-faq__item {
+	border: 1px solid var(--dev3ec-faq-line);
+	border-radius: var(--dev3ec-faq-radius);
+	background: var(--dev3ec-faq-tint);
+	margin: 0;
+	padding: 0;
+}
+.dev3ec-faq .dev3ec-faq__q {
+	cursor: pointer;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	min-height: 44px;
+	padding: 10px 16px;
+	font-weight: 600;
+	line-height: 1.4;
+}
+.dev3ec-faq .dev3ec-faq__q::-webkit-details-marker { display: none; }
+.dev3ec-faq .dev3ec-faq__q::after {
+	content: "";
+	flex: none;
+	width: 8px;
+	height: 8px;
+	border-right: 2px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	transform: rotate(45deg);
+	margin-top: -4px;
+	transition: transform 0.15s ease;
+}
+.dev3ec-faq .dev3ec-faq__item[open] > .dev3ec-faq__q::after { transform: rotate(-135deg); margin-top: 4px; }
+.dev3ec-faq .dev3ec-faq__q:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; border-radius: var(--dev3ec-faq-radius); }
+.dev3ec-faq .dev3ec-faq__a { padding: 0 16px 12px; }
+.dev3ec-faq .dev3ec-faq__a > p { margin: 0 0 0.75em; }
+.dev3ec-faq .dev3ec-faq__a > p:last-child { margin-bottom: 0; }
+@supports not (color: color-mix(in srgb, red 50%, blue)) {
+	.dev3ec-faq { --dev3ec-faq-line: rgba(127, 127, 127, 0.35); --dev3ec-faq-tint: transparent; }
+}
+@media (prefers-reduced-motion: reduce) { .dev3ec-faq .dev3ec-faq__q::after { transition: none; } }

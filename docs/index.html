@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV3 AI Event Writer for The Events Calendar: Documentation</title>
+<style>
+:root { --brand: #4f46e5; --text: #1f2328; --muted: #4b5563; --line: #e3e6eb; --soft: #f6f7fb; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header { background: linear-gradient(135deg, #4f46e5, #7c2d12); color: #fff; padding: 40px 16px; }
+header .wrap, main { max-width: 980px; margin: 0 auto; }
+header h1 { margin: 0 0 6px; font-size: clamp(24px, 4vw, 34px); }
+header p { margin: 0; opacity: .92; }
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--line); overflow-x: auto; white-space: nowrap; padding: 0 16px; z-index: 2; }
+nav a { display: inline-block; padding: 12px 10px; color: var(--muted); text-decoration: none; font-size: 14px; }
+nav a:hover, nav a:focus { color: var(--brand); }
+main { padding: 8px 16px 64px; }
+h2 { margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 24px; }
+h3 { margin-top: 28px; font-size: 18px; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13.5px; }
+code { background: var(--soft); padding: 2px 6px; border-radius: 4px; }
+pre { background: #0f172a; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; }
+pre code { background: none; padding: 0; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; display: block; overflow-x: auto; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--soft); }
+.note { background: #eef2ff; border-left: 4px solid var(--brand); padding: 12px 16px; border-radius: 4px; }
+img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+.shots { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.shots figure { margin: 0; }
+.shots figcaption { font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>DEV3 AI Event Writer for The Events Calendar</h1><p>Descriptions, social posts, emails, recaps, FAQs, SEO meta and flyer imports for The Events Calendar. Version 1.0.0.</p></div></header>
+<nav aria-label="Sections"><a href="#install">Install</a><a href="#key">Gemini key</a><a href="#editor">Event editor</a><a href="#description">Description</a><a href="#social">Social</a><a href="#emails">Emails</a><a href="#faq">FAQ</a><a href="#seo">SEO</a><a href="#import">Flyer import</a><a href="#bulk">Bulk &amp; review</a><a href="#settings">Settings</a><a href="#hooks">Hooks</a><a href="#faqs">FAQ</a><a href="#changelog">Changelog</a></nav>
+<main>
+
+<h2 id="install">Installation</h2>
+<ol>
+<li>Install and activate <strong>The Events Calendar</strong> (free, required). <strong>Event Tickets</strong> (free) is optional and adds attendance numbers and attendee emails.</li>
+<li>In WordPress go to <em>Plugins &gt; Add New &gt; Upload Plugin</em>, choose <code>dev3-ai-events-calendar.zip</code>, install and activate.</li>
+<li>Open <em>DEV3 AI Events</em> in the admin menu (also linked under <em>Events &gt; DEV3 AI Writer</em>).</li>
+</ol>
+<p>Requirements: WordPress 6.0+ (The Events Calendar itself may need a newer version), PHP 7.4+ (tested on 8.3). No licence key or account is needed.</p>
+
+<h2 id="key">Google Gemini API key</h2>
+<ol>
+<li>Go to <a href="https://aistudio.google.com/app/apikey">Google AI Studio</a> and create an API key.</li>
+<li>In <em>DEV3 AI Events &gt; API Config</em>, paste the key and click <em>Validate</em>. The key is stored encrypted and never sent to the browser.</li>
+<li>Optional: set a monthly budget (AI pauses when it is reached), pick the models (default <code>gemini-2.5-flash</code>; descriptions and flyer reading use <code>gemini-2.5-pro</code>), and switch on PII masking.</li>
+</ol>
+<p>You can also define the key in <code>wp-config.php</code>: <code>define( 'DEV3EC_GEMINI_API_KEY', '…' );</code></p>
+<p class="note">Without a key everything except the AI buttons works: templates, manual editing, emails, FAQ output, SEO meta and manual flyer entry.</p>
+
+<h2 id="editor">In the event editor</h2>
+<p><strong>Block editor</strong> (TEC setting <em>Activate Block Editor for Events</em>): click the DEV3 AI Event Writer icon in the top bar. <strong>Classic editor</strong>: the <em>DEV3 AI Event Writer</em> box sits below the editor. Both show the same tabs: Description, Social, Emails, FAQ and SEO.</p>
+<p>Each tab has notes and options (tone, language, length, audience, networks, number of questions, focus phrase), <em>Generate with DEV3 AI</em> and <em>Use template</em>. The result is a draft: <em>Changes</em> shows a word diff against the current text; you can <em>Edit</em>, <em>Regenerate</em>, <em>Reject</em> or <em>Accept</em>.</p>
+<p>DEV3 AI reads the last <em>saved</em> version of the event (date, time zone, venue, organizers, cost, categories, ticket types). Save the event first after changing them.</p>
+<div class="shots">
+<figure><img src="screenshots/3-block-editor-sidebar.png" alt="Block editor with the DEV3 AI Event Writer sidebar"><figcaption>Block editor sidebar</figcaption></figure>
+<figure><img src="screenshots/2-description-draft-diff.png" alt="Description draft with diff"><figcaption>Draft with diff</figcaption></figure>
+</div>
+
+<h2 id="description">Event descriptions</h2>
+<p>DEV3 AI writes an excerpt and 2-5 sections (headings, paragraphs and lists) plus a call to action, using only the event's facts and your notes. On accept:</p>
+<ul>
+<li><strong>Block editor</strong>: native <code>core/heading</code>, <code>core/paragraph</code> and <code>core/list</code> blocks are inserted. <em>Replace</em> removes the old text blocks and keeps TEC blocks, images and embeds; <em>Add after</em> keeps the old text. The excerpt is filled. Click <em>Update</em> to save.</li>
+<li><strong>Classic editor</strong>: HTML goes into the editor (visual or text tab) and the excerpt box.</li>
+<li><strong>Admin app / Review queue</strong>: the event is updated directly.</li>
+</ul>
+<p>In the text editor of a draft, lines starting with <code>##</code> are headings and lines starting with <code>-</code> are list items.</p>
+
+<h2 id="social">Social posts</h2>
+<p>One post per network, fitted to the network's limit. Counters follow each network's rules:</p>
+<table><thead><tr><th>Network</th><th>Limit</th><th>Notes</th></tr></thead><tbody>
+<tr><td>X</td><td>280</td><td>Every link counts as 23 characters</td></tr>
+<tr><td>Bluesky</td><td>300</td><td></td></tr>
+<tr><td>Threads</td><td>500</td><td></td></tr>
+<tr><td>Mastodon</td><td>500</td><td>Links count as 23 characters</td></tr>
+<tr><td>Instagram</td><td>2,200</td><td>Links are not clickable: “link in bio”</td></tr>
+<tr><td>LinkedIn</td><td>3,000</td><td></td></tr>
+<tr><td>Facebook</td><td>2,000 (DEV3 limit)</td><td>Ideal under 500</td></tr>
+</tbody></table>
+<p>Saved posts can be edited by hand, copied, or opened in the network's share dialog. DEV3 does not post automatically.</p>
+
+<h2 id="emails">Promo, reminder and recap emails</h2>
+<p>Each email has a subject, preheader and body. Merge tags: <code>{attendee_name}</code>, <code>{event_title}</code>, <code>{event_date}</code>, <code>{event_time}</code>, <code>{venue}</code>, <code>{event_url}</code>, <code>{site_name}</code>.</p>
+<ul>
+<li><strong>Send me a test</strong> sends the current (even unsaved) email to your account address.</li>
+<li><strong>Send to attendees</strong> (administrators, Event Tickets) sends one email per unique attendee address in the background and logs it.</li>
+<li><strong>Automatic reminder</strong> (Settings): the saved reminder goes out once per event, N hours before it starts.</li>
+<li>The <strong>recap</strong> uses Event Tickets counts (registered, checked in, per ticket). Only counts are sent to the AI, never names or emails.</li>
+</ul>
+<p>The promo email is meant for your newsletter tool: copy it, or send yourself a test to forward.</p>
+
+<h2 id="faq">FAQ</h2>
+<p>3-10 questions answered from the event's facts (otherwise “contact the organiser”). Saved FAQs show below the event description (setting), in the <em>Event FAQ</em> block, or with <code>[dev3ec_faq id="123" heading="Questions"]</code>, with FAQPage JSON-LD. In the block editor, <em>Insert as blocks</em> adds <code>core/details</code> blocks instead.</p>
+<p>Style it with CSS custom properties on <code>.dev3ec-faq</code>: <code>--dev3ec-faq-line</code>, <code>--dev3ec-faq-tint</code>, <code>--dev3ec-faq-radius</code>, <code>--dev3ec-faq-gap</code>, <code>--dev3ec-faq-title-size</code>.</p>
+
+<h2 id="seo">SEO meta</h2>
+<p>SEO title (ideal 30-60 characters) and meta description (110-155) with a search preview. Values are written into <strong>Yoast SEO</strong> (<code>_yoast_wpseo_title</code>, <code>_yoast_wpseo_metadesc</code>) or <strong>Rank Math</strong> (<code>rank_math_title</code>, <code>rank_math_description</code>) when active, and their editor fields are kept in sync so a later Update does not overwrite them. Without an SEO plugin DEV3 prints the title, meta description and Open Graph tags (can be switched off).</p>
+
+<h2 id="import">Import an event from a flyer</h2>
+<ol>
+<li><em>DEV3 AI Events &gt; Import flyer</em>: drop a JPG, PNG, WebP or PDF (15 MB max) and add notes (e.g. “the year is 2027”).</li>
+<li><em>Read with DEV3 AI</em> runs in the background. Or choose <em>Fill in by hand</em>.</li>
+<li>Review every field beside the flyer. Fields DEV3 AI was unsure about, or that are not on the flyer, are marked.</li>
+<li>Venue and organizer: <em>Use existing</em> (matched by name, city, address, email or website, with a match score), <em>Create new</em> or <em>None</em>. Categories are matched to your event categories.</li>
+<li><em>Create draft event</em> creates a <strong>draft</strong> event through TEC's own API, with the flyer as featured image (optional).</li>
+</ol>
+<img src="screenshots/4-flyer-import-review.png" alt="Flyer import review">
+
+<h2 id="bulk">Bulk generation and the review queue</h2>
+<p><em>Events</em> lists TEC events (upcoming, past, all; category; missing content). Select events, click <em>Generate</em>, pick outputs, tone, language and notes, and whether to fill only what is missing. It runs as a background job (progress, cancel, retry). The same is available from the TEC events list: row link <em>Write with DEV3 AI</em> and bulk action <em>Generate with DEV3 AI</em>.</p>
+<p><em>Review</em> lists every draft. Open one to see the diff, edit and accept or reject; or select several and accept/reject them at once. If the event changed after the draft was written, DEV3 asks before accepting.</p>
+<img src="screenshots/5-bulk-events.png" alt="Bulk events screen">
+
+<h2 id="settings">Settings</h2>
+<table><thead><tr><th>Setting</th><th>What it does</th></tr></thead><tbody>
+<tr><td>Default tone / language</td><td>Used by every writer unless changed per request.</td></tr>
+<tr><td>Brand hashtags, default networks</td><td>Social defaults.</td></tr>
+<tr><td>Show the FAQ</td><td>Below the description, or only via block/shortcode. FAQ schema on/off.</td></tr>
+<tr><td>SEO meta output</td><td>Print meta tags when no SEO plugin is active, or never.</td></tr>
+<tr><td>From name, reply-to</td><td>Email headers.</td></tr>
+<tr><td>Automatic reminder, hours before</td><td>Sends the saved reminder once per event.</td></tr>
+<tr><td>Imported events are saved as</td><td>Draft or Pending review; featured image default.</td></tr>
+<tr><td>Delete data on uninstall</td><td>Drops DEV3 tables, options and saved outputs. Events stay.</td></tr>
+</tbody></table>
+
+<h2 id="hooks">Hooks for developers</h2>
+<table><thead><tr><th>Hook</th><th>Type</th><th>Use</th></tr></thead><tbody>
+<tr><td><code>dev3ec_attendees( $rows, $event_id )</code></td><td>filter</td><td>Attendee rows (Event Tickets format) from other ticket plugins.</td></tr>
+<tr><td><code>dev3ec_seo_adapter( $id )</code></td><td>filter</td><td>Force <code>yoast</code>, <code>rankmath</code> or <code>native</code>.</td></tr>
+<tr><td><code>dev3ec_seo_written( $id, $vals, $adapter )</code></td><td>action</td><td>After SEO meta was written.</td></tr>
+<tr><td><code>dev3ec_draft_accepted( $draft, $saved, $mode )</code></td><td>action</td><td>After a draft was accepted.</td></tr>
+<tr><td><code>dev3ec_email_html( $html, $subject, $body )</code></td><td>filter</td><td>Replace the email template.</td></tr>
+<tr><td><code>dev3ec_prompt_&lt;id&gt;( $prompt )</code></td><td>filter</td><td>Change a prompt: <code>event_description</code>, <code>social_posts</code>, <code>event_email</code>, <code>recap_email</code>, <code>event_faq</code>, <code>event_seo</code>, <code>flyer_import</code>.</td></tr>
+<tr><td><code>dev3ec_ai_guard</code>, <code>dev3ec_model_prices</code>, <code>dev3ec_capability</code>, <code>dev3ec_manage_capability</code></td><td>filter</td><td>Shared DEV3 core: block AI calls, prices, capabilities.</td></tr>
+</tbody></table>
+<p>REST namespace <code>dev3ec/v1</code>: <code>status</code>, <code>events</code>, <code>events/&lt;id&gt;</code>, <code>events/&lt;id&gt;/generate|template|assets|send</code>, <code>bulk</code>, <code>drafts</code>, <code>drafts/&lt;id&gt;/accept|reject</code>, <code>drafts/bulk</code>, <code>imports</code>, <code>imports/&lt;id&gt;/create</code>, <code>places</code>. All need a logged-in user, a REST nonce and <code>edit_post</code> on the event.</p>
+
+<h2 id="faqs">FAQ</h2>
+<h3>Does DEV3 change my events on its own?</h3><p>No. Nothing is saved until you accept a draft; imports create draft events.</p>
+<h3>What is sent to Google?</h3><p>The event's facts (title, dates, venue, organizers, cost, categories, ticket types, current description) and your notes. Attendee names and emails are never sent.</p>
+<h3>The recap says nothing about attendance.</h3><p>Install Event Tickets; with attendees, counts are included.</p>
+<h3>I use Events Calendar Pro recurring events.</h3><p>DEV3 writes for the event post; recurring instances share it.</p>
+<h3>Emails do not arrive.</h3><p>Use <em>Send me a test</em> and check your site's mail setup (an SMTP plugin is recommended).</p>
+
+<h2 id="changelog">Changelog</h2>
+<p><strong>1.0.0</strong>: Initial release.</p>
+</main>
+</body>
+</html>
